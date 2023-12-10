@@ -13,7 +13,7 @@ def process_main_page():
 
 
 def show_main_page():
-    image = Image.open('data/UPLIFT.jpg')
+    image = Image.open('UPLIFT.jpg')
 
     st.set_page_config(
         layout="wide",
@@ -35,7 +35,7 @@ def show_main_page():
 @st.cache
 # Шаг 1: Загрузка данных
 def load_data():
-    data = pd.read_csv('data/total.csv')
+    data = pd.read_csv('total.csv')
     return data
 
 
