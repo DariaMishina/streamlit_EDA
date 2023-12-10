@@ -13,7 +13,7 @@ def process_main_page():
 
 
 def show_main_page():
-    image = Image.open('UPLIFT.jpg')
+    image = Image.open('data/UPLIFT.jpg')
 
     st.set_page_config(
         layout="wide",
@@ -35,7 +35,7 @@ def show_main_page():
 @st.cache
 # Шаг 1: Загрузка данных
 def load_data():
-    data = pd.read_csv('total.csv')
+    data = pd.read_csv('data/total.csv')
     return data
 
 
@@ -70,6 +70,10 @@ def viz_eda():
     st.subheader('Числовые характеристики распределения числовых столбцов')
     stats = data.describe()
     st.write(stats)
+    st.subheader('вариант 2')
+    st.dataframe(stats)
+    st.subheader('вариант 3')
+    st.table(stats)
 
 
 if __name__ == "__main__":
